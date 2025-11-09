@@ -1,4 +1,3 @@
-// run_pwsh_hidden.rc — resource info
 #include <windows.h>
 
 VS_VERSION_INFO VERSIONINFO
@@ -14,19 +13,15 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "Casa", "Claudio/Bolzoni\0"
-      VALUE "FileDescription", "run_pwsh_hidden — Launch a PowerShell script hidden and return its exit code\0"
-      VALUE "FileVersion", "1.0.0\0"
-      VALUE "InternalName", "run_pwsh_hidden\0"
-      VALUE "OriginalFilename", "run_pwsh_hidden.exe\0"
-      VALUE "ProductName", "run_pwsh_hidden\0"
-      VALUE "ProductVersion", "1.0.0\0"
-      VALUE "Author", "Claudio Bolzoni\0"
-      VALUE "Copyright", "(C) 2025 Claudio Bolzoni\0"
-      VALUE "License", "MIT License\0"
-      VALUE "Contact", "cbz@proton.me\0"
-      VALUE "Website", "https://github.com/cbolzoni/run_pwsh_hidden\0"
-      VALUE "Comments", "Utility for context-menu integrations (e.g., StExBar) without flashing consoles.\0"
+      VALUE "CompanyName", "https://github.com/cbolzoni"
+      VALUE "FileDescription", "run_pwsh_hidden — Launch a PowerShell script hidden"
+      VALUE "FileVersion", "1.0.0"
+      VALUE "InternalName", "run_pwsh_hidden"
+      VALUE "OriginalFilename", "run_pwsh_hidden.exe"
+      VALUE "ProductName", "run_pwsh_hidden CLI"
+      VALUE "ProductVersion", "1.0.0"
+      VALUE "LegalCopyright", "© 2025 Claudio Bolzoni. License: MIT"
+      VALUE "Comments", "Utility for context-menu integrations (e.g., StExBar) without flashing consoles"
     END
   END
   BLOCK "VarFileInfo"

@@ -47,7 +47,7 @@ make
 ### CMake (Windows)
 
 ```bash
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 # -> build/Release/run_pwsh_hidden.exe (or build/run_pwsh_hidden.exe)
 ```

@@ -1,28 +1,29 @@
-# Makefile for run_pwsh_hidden (Windows-only)
+# MinGW/Win32 Makefile for run_pwsh_hidden
+# Ensures Unicode startup (-municode) and GUI subsystem (-mwindows)
 
-NAME      := run_pwsh_hidden
-SRC       := src/$(NAME).c
-RES       := res/$(NAME).rc
-OUTDIR    := build
+CC      := gcc
+RC      := windres
+CFLAGS  := -O2 -Wall -Wextra -DUNICODE -D_UNICODE
+LDFLAGS := -municode -mwindows
+OUT     := run_pwsh_hidden.exe
 
-CC        := gcc
-WINDRES   := windres
-CFLAGS    := -O2 -Wall -Wextra -municode -mwindows
-LDFLAGS   := -s
-RESOBJ    := $(OUTDIR)/$(NAME).res
+SRC     := src/run_pwsh_hidden.c
+RES     := res/run_pwsh_hidden.rc
+OBJ     := $(SRC:.c=.o)
+RESOBJ  := $(RES:.rc=.o)
 
-all: $(OUTDIR)/$(NAME).exe
+all: $(OUT)
 
-$(OUTDIR):
-	@mkdir -p $(OUTDIR)
+$(OUT): $(OBJ) $(RESOBJ)
+	$(CC) $(OBJ) $(RESOBJ) $(LDFLAGS) -o $@
 
-$(RESOBJ): $(RES) | $(OUTDIR)
-	$(WINDRES) $< -O coff -o $@
+src/%.o: src/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OUTDIR)/$(NAME).exe: $(SRC) $(RESOBJ) | $(OUTDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRC) $(RESOBJ) $(LDFLAGS)
+res/%.o: res/%.rc
+	$(RC) $< $@
 
 clean:
-	@rm -rf $(OUTDIR)
+	-del $(OBJ) $(RESOBJ) $(OUT) 2>NUL || rm -f $(OBJ) $(RESOBJ) $(OUT)
 
 .PHONY: all clean

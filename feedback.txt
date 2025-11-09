@@ -1,0 +1,7 @@
+[1/1] Linking C executable run_pwsh_hidden.exe
+FAILED: [code=1] run_pwsh_hidden.exe 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Bin\msys64\mingw64\bin\cc.exe -O3 -DNDEBUG -mwindows -s CMakeFiles/run_pwsh_hidden.dir/src/run_pwsh_hidden.c.obj CMakeFiles/run_pwsh_hidden.dir/res/run_pwsh_hidden.rc.obj -o run_pwsh_hidden.exe -Wl,--out-implib,librun_pwsh_hidden.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+C:/Bin/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/Bin/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-crtexewin.o): in function `main':
+D:/W/B/src/mingw-w64/mingw-w64-crt/crt/crtexewin.c:62:(.text.startup+0xb6): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
