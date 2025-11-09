@@ -1,0 +1,26 @@
+# .editorconfig — enforce consistent formatting across editors
+root = true
+
+# Default settings
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Makefiles use tabs
+[Makefile]
+indent_style = tab
+
+# Markdown — preserve trailing spaces (for intentional line breaks)
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 2
+
+# C / Header files
+[*.{c,h}]
+indent_style = space
+indent_size = 4
+continuation_indent_size = 4

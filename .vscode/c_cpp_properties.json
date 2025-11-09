@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "MSYS2 MinGW64",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:/Bin/msys64/mingw64/bin/gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/res"
+            ],
+            "defines": [
+                "WIN32",
+                "_CRT_SECURE_NO_WARNINGS"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/src",
+                    "${workspaceFolder}/res"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "Linux / macOS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/res"
+            ],
+            "defines": []
+        }
+    ],
+    "version": 4
+}

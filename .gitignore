@@ -1,0 +1,12 @@
+# build outputs
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+cmake-build-*/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+*.res
+*.log
